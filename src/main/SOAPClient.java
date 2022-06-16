@@ -8,6 +8,11 @@ import org.jrichardsz.soapeasier.core.impl.SoapClasspathMessage;
 public class SOAPClient {
 
 	public static void main(String[] args) throws Exception {
+		System.setProperty("http.proxyHost", "127.0.0.1");
+	    System.setProperty("https.proxyHost", "127.0.0.1");
+	    System.setProperty("http.proxyPort", "8866");
+	    System.setProperty("https.proxyPort", "8866");
+
 		simpleHttpSoapClientTest();
 		System.out.println();
 		simpleHttpSoapClientWithParametersTest();
